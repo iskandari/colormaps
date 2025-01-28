@@ -127,7 +127,7 @@ var makeColormap = function makeColormap(name, options) {
   var grey = '#9aa3b3';
   var start, middle;
   if (mode === 'dark') {
-    start = chroma__default["default"]('#1b1e23').brighten(0.3);
+    start = chroma__default["default"]('#1b1c5f').brighten(0);
     middle = chroma__default["default"]('#808080').brighten(0.6);
     chroma__default["default"]('#ebebec');
   }

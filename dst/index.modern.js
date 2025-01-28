@@ -120,7 +120,7 @@ const makeColormap = (name, options) => {
   const grey = '#9aa3b3';
   let start, middle;
   if (mode === 'dark') {
-    start = chroma('#1b1e23').brighten(0.3);
+    start = chroma('#1b1c5f').brighten(0);
     middle = chroma('#808080').brighten(0.6);
     chroma('#ebebec');
   }
