@@ -29,8 +29,7 @@ const makeColormap = (name, options) => {
   let start, middle, end
 
   if (mode === 'dark') {
-    //start = chroma('#1b1c5f').brighten(0)
-    start = chroma('#ff00ff')
+    start = chroma('#1b1c37').brighten(0)
     middle = chroma('#808080').brighten(0.6)
     end = chroma('#ebebec')
   }
@@ -198,8 +197,7 @@ const makeColormap = (name, options) => {
           chroma(yellow).brighten(0.5),
         ]
         const pre = chroma.bezier(preRamp).scale().colors(4)
-        //ramp = [start, pre[0], pre[1], pre[2], pre[3]]
-        ramp = [chroma('#ff00ff'), chroma('#ff0000')]
+        ramp = [start, pre[0], pre[1], pre[2], pre[3]]
       }
       if (mode === 'light') {
         const preRamp = [
