@@ -188,7 +188,7 @@ const makeColormap = (name, options) => {
       }
       break
     case 'warm':
-      correctLightness = true
+      correctLightness = false
       if (mode === 'dark') {
         const preRamp = [
           chroma(purple).darken(1.5),
@@ -198,7 +198,8 @@ const makeColormap = (name, options) => {
           chroma(yellow).brighten(0.5),
         ]
         const pre = chroma.bezier(preRamp).scale().colors(4)
-        ramp = [start, pre[0], pre[1], pre[2], pre[3]]
+        //ramp = [start, pre[0], pre[1], pre[2], pre[3]]
+        ramp = [chroma('#ff00ff'), chroma('#ff0000')]
       }
       if (mode === 'light') {
         const preRamp = [
