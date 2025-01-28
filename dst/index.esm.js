@@ -123,7 +123,8 @@ var makeColormap = function makeColormap(name, options) {
   var grey = '#9aa3b3';
   var start, middle;
   if (mode === 'dark') {
-    start = chroma('#1b1c5f').brighten(0);
+    //start = chroma('#1b1c5f').brighten(0)
+    start = chroma('#ff00ff');
     middle = chroma('#808080').brighten(0.6);
     chroma('#ebebec');
   }
