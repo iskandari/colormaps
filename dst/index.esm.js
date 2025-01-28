@@ -219,11 +219,12 @@ var makeColormap = function makeColormap(name, options) {
       }
       break;
     case 'warm':
-      correctLightness = true;
+      correctLightness = false;
       if (mode === 'dark') {
         var preRamp = [chroma(purple).darken(1.5), chroma(pink).darken(1), chroma(red).darken(0.5), chroma(orange), chroma(yellow).brighten(0.5)];
-        var pre = chroma.bezier(preRamp).scale().colors(4);
-        ramp = [start, pre[0], pre[1], pre[2], pre[3]];
+        chroma.bezier(preRamp).scale().colors(4);
+        //ramp = [start, pre[0], pre[1], pre[2], pre[3]]
+        ramp = [chroma('#ff00ff'), chroma('#ff0000')];
       }
       if (mode === 'light') {
         var _preRamp = [chroma(yellow).brighten(1.5), chroma(orange).brighten(1), chroma(red).brighten(0.5), chroma(pink), chroma(purple).darken(0.5)];
