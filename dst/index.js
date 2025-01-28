@@ -127,8 +127,7 @@ var makeColormap = function makeColormap(name, options) {
   var grey = '#9aa3b3';
   var start, middle;
   if (mode === 'dark') {
-    //start = chroma('#1b1c5f').brighten(0)
-    start = chroma__default["default"]('#ff00ff');
+    start = chroma__default["default"]('#1b1c37').brighten(0);
     middle = chroma__default["default"]('#808080').brighten(0.6);
     chroma__default["default"]('#ebebec');
   }
@@ -226,9 +225,8 @@ var makeColormap = function makeColormap(name, options) {
       correctLightness = false;
       if (mode === 'dark') {
         var preRamp = [chroma__default["default"](purple).darken(1.5), chroma__default["default"](pink).darken(1), chroma__default["default"](red).darken(0.5), chroma__default["default"](orange), chroma__default["default"](yellow).brighten(0.5)];
-        chroma__default["default"].bezier(preRamp).scale().colors(4);
-        //ramp = [start, pre[0], pre[1], pre[2], pre[3]]
-        ramp = [chroma__default["default"]('#ff00ff'), chroma__default["default"]('#ff0000')];
+        var pre = chroma__default["default"].bezier(preRamp).scale().colors(4);
+        ramp = [start, pre[0], pre[1], pre[2], pre[3]];
       }
       if (mode === 'light') {
         var _preRamp = [chroma__default["default"](yellow).brighten(1.5), chroma__default["default"](orange).brighten(1), chroma__default["default"](red).brighten(0.5), chroma__default["default"](pink), chroma__default["default"](purple).darken(0.5)];
