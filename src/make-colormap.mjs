@@ -29,7 +29,8 @@ const makeColormap = (name, options) => {
   let start, middle, end
 
   if (mode === 'dark') {
-    start = chroma('#1b1c5f').brighten(0)
+    //start = chroma('#1b1c5f').brighten(0)
+    start = chroma('#ff00ff')
     middle = chroma('#808080').brighten(0.6)
     end = chroma('#ebebec')
   }
