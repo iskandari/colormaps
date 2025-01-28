@@ -190,11 +190,11 @@ const makeColormap = (name, options) => {
       correctLightness = true
       if (mode === 'dark') {
         const preRamp = [
-          chroma(purple).darken(1.5),
-          chroma(pink).darken(1),
-          chroma(red).darken(0.5),
+          chroma(purple).darken(0.9),
+          chroma(pink).darken(0.6),
+          chroma(red).darken(0.3),
           chroma(orange),
-          chroma(yellow).brighten(0.5),
+          chroma(yellow).brighten(0.3),
         ]
         const pre = chroma.bezier(preRamp).scale().colors(4)
         ramp = [start, pre[0], pre[1], pre[2], pre[3]]
